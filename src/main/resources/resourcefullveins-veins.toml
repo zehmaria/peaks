@@ -1,0 +1,25 @@
+#List of diet groups
+[[veins]]
+resource = "minecraft:iron_ore"
+deepslate = "minecraft:deepslate_iron_ore"
+extraRadius = 0
+extraDeltaRadius = 0
+chance = 10
+biometag = "minecraft:is_overworld"
+
+[[veins]]
+resource = "minecraft:copper_ore"
+deepslate = "minecraft:deepslate_copper_ore"
+extraRadius = 0
+extraDeltaRadius = 0
+chance = 10
+biometag = "minecraft:is_overworld"
+
+
+[[veins]]
+resource = "minecraft:coal_ore"
+deepslate = "minecraft:deepslate_coal_ore"
+extraRadius = 2
+extraDeltaRadius = 2
+chance = 20
+biometag = "minecraft:is_overworld"

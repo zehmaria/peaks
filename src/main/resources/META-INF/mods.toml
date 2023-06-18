@@ -1,0 +1,21 @@
+modLoader="javafml"
+license="MIT License, Copyright (c) 2020 vectorwing, Copyright (c) 2023 Zeh Maria"
+loaderVersion="[43,)"
+issueTrackerURL="https://github.com/zehmaria/resourcefullveins/issues"
+displayURL="https://github.com/zehmaria/resourcefullveins"
+logoFile="rv_logo.png"
+
+[[mods]]
+    modId="resourcefullveins"
+    version="${file.jarVersion}"
+    displayName="Resourcefull Veins"
+	authors="zeh_maria"
+    description="Find your resource-fix already sitting around in your world!"
+
+[[dependencies.resourcefullveins]]
+    modId="forge"
+    mandatory=true
+    versionRange="[43.2.11,)"
+    ordering="NONE"
+    side="BOTH"
+
