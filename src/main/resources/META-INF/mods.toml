@@ -1,9 +1,9 @@
 modLoader="javafml"
-license="MIT License, Copyright (c) 2020 vectorwing, Copyright (c) 2023 Zeh Maria"
+license="MIT"
 loaderVersion="[43,)"
 issueTrackerURL="https://github.com/zehmaria/resourcefullveins/issues"
 displayURL="https://github.com/zehmaria/resourcefullveins"
-logoFile="rv_logo.png"
+logoFile="logo.png"
 
 [[mods]]
     modId="resourcefullveins"
