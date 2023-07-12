@@ -29,14 +29,8 @@ public class Configuration {
     public static ForgeConfigSpec COMMON_CONFIG;
     public static final String CATEGORY_WORLD = "world";
 
-	public static ForgeConfigSpec.IntValue CHANCE_ORE_VEIN;
-
 	public static ForgeConfigSpec.IntValue VEIN_MIN_RADIUS;
 	public static ForgeConfigSpec.IntValue VEIN_RADIUS_DELTA;
-
-	public static ForgeConfigSpec.ConfigValue<List<? extends String>> VEINS_LIST_COMMON;
-	public static ForgeConfigSpec.ConfigValue<List<? extends String>> VEINS_LIST_DEEPSLATE;
-	public static ForgeConfigSpec.ConfigValue<List<? extends Integer>> VEINS_LIST_CHANCE;
 
 	public static final ForgeConfigSpec VEINS_SPEC;
 	public static final Veins VEINS;
@@ -61,8 +55,6 @@ public class Configuration {
         COMMON_BUILDER.comment("World generation").push(CATEGORY_WORLD);
 
 	    COMMON_BUILDER.comment("Vein generation").push("general_vein");
-	    CHANCE_ORE_VEIN = COMMON_BUILDER.comment("Chance of generating veins. Smaller value = more frequent.")
-				.defineInRange("chance", 128, 0, Integer.MAX_VALUE);
 
 		VEIN_MIN_RADIUS = COMMON_BUILDER.comment("Minimum radius for the veins.")
 				.defineInRange("minRadius", 8, 1, Integer.MAX_VALUE);

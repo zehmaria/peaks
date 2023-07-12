@@ -1,6 +1,6 @@
 modLoader="javafml"
 license="MIT"
-loaderVersion="[43,)"
+loaderVersion="[47,)"
 issueTrackerURL="https://github.com/zehmaria/resourcefullveins/issues"
 displayURL="https://github.com/zehmaria/resourcefullveins"
 logoFile="logo.png"
@@ -15,7 +15,12 @@ logoFile="logo.png"
 [[dependencies.resourcefullveins]]
     modId="forge"
     mandatory=true
-    versionRange="[43.2.11,)"
+    versionRange="[47.0.0,)"
     ordering="NONE"
     side="BOTH"
-
+[[dependencies.resourcefullveins]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20,1.21)"
+    ordering="NONE"
+    side="BOTH"

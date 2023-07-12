@@ -1,0 +1,6 @@
+{
+  "type": "resourcefullveins:add_features_by_filter",
+  "allowed_biomes": "#minecraft:is_overworld",
+  "features": "resourcefullveins:veins",
+  "step": "vegetal_decoration"
+}
