@@ -2,6 +2,7 @@ package zeh.resourcefullveins.common.world.feature;
 
 import com.mojang.serialization.Codec;
 import net.minecraft.core.Holder;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Blocks;
@@ -56,7 +57,9 @@ public class VeinFeature extends Feature<VeinConfiguration> {
         int edr = vein.extraDeltaRadius;
         int _radius = minRadius + er + rand.nextInt(deltaRadius + edr);
 
-        if (!world.getBiome(context.origin()).is(TagKey.create(ForgeRegistries.BIOMES.getRegistryKey(), new ResourceLocation(vein.biometag)))) return false;
+        if (!world.getBiome(context.origin())
+                .is(TagKey.create(ForgeRegistries.BIOMES.getRegistryKey(), new ResourceLocation(vein.biometag))))
+            return false;
 
         for (int i = -_radius; i <= _radius; i++) {
             for (int k = -_radius; k <= _radius; k++) {
