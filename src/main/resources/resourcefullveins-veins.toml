@@ -1,25 +1,59 @@
-#List of diet groups
+# List of veins
+
+# A vein is a feature that generates a column of blocks from way down the bedrock to a few layers above ground.
+
+# Config:
+#
+# stone = a block to replace the stone layer
+#
+# deepslate = a block to replace the deepslate layer
+#
+# extraRadius = this adds to the default minRadius,
+#               use this if you want to make the column thicker in average,
+#               the base value can be configured in resourcefullveins-common.toml.
+#
+# extraDeltaRadius = this adds to the default deltaRadius, which affects the randomness in the tickness,
+#                    use this if you want to make this column type thickness randomly varies more,
+#                    the base value can be configured in resourcefullveins-common.toml.
+#
+# weight = all veins are a single feature, specifically done this way to avoid overlaps.
+#          default chance value can be changed in resourcefullveins-common.toml.
+#          once a vein generates, the feature then picks from all veins types allowed in the biome of the location,
+#          so this values set the weight to pick this one when compared to the others.
+#          it means very little by itself and works by comparison.
+#          example: in deserts, yous set only two veins for it,
+#                   if one vein has 20 and the other 2,
+#                   the former is 10 times more likely to appear.
+#
+# failure = sometimes, you might want to make a type of vein even more rare while keep some others common,
+#           so set this to a percentage [0-100] to have a chance of failure even if this vein is picked.
+#
+# biome = can be a single biome or a tag[must start with #]
+
+
 [[veins]]
-resource = "minecraft:iron_ore"
+stone = "minecraft:iron_ore"
 deepslate = "minecraft:deepslate_iron_ore"
 extraRadius = 0
 extraDeltaRadius = 0
-chance = 10
-biometag = "minecraft:is_overworld"
+weight = 10
+failure = 0
+biome = "#minecraft:is_overworld"
 
 [[veins]]
-resource = "minecraft:copper_ore"
+stone = "minecraft:copper_ore"
 deepslate = "minecraft:deepslate_copper_ore"
 extraRadius = 0
 extraDeltaRadius = 0
-chance = 10
-biometag = "minecraft:is_overworld"
-
+weight = 10
+failure = 0
+biome = "#minecraft:is_overworld"
 
 [[veins]]
-resource = "minecraft:coal_ore"
+stone = "minecraft:coal_ore"
 deepslate = "minecraft:deepslate_coal_ore"
-extraRadius = 2
-extraDeltaRadius = 2
-chance = 20
-biometag = "minecraft:is_overworld"
+extraRadius = 5
+extraDeltaRadius = 5
+weight = 20
+failure = 0
+biome = "#minecraft:is_overworld"

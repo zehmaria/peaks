@@ -1,10 +1,11 @@
 package zeh.resourcefullveins.common;
 
 public class VeinConfig {
-    public String resource;
+    public String stone;
     public String deepslate;
     public Integer extraRadius;
     public Integer extraDeltaRadius;
-    public Integer chance;
-    public String biometag;
+    public Integer weight;
+    public Integer failure;
+    public String biome;
 }

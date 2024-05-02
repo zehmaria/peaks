@@ -13,8 +13,8 @@ import net.minecraft.world.level.levelgen.placement.PlacementModifierType;
 import net.minecraftforge.registries.ForgeRegistries;
 import zeh.resourcefullveins.common.registry.ModPlacementModifiers;
 
-public class BiomeTagFilter extends PlacementFilter
-{
+public class BiomeTagFilter extends PlacementFilter {
+
 	public static final Codec<BiomeTagFilter> CODEC = RecordCodecBuilder.create(
         (builder) -> builder.group(
 		    TagKey.codec(ForgeRegistries.BIOMES.getRegistryKey()).fieldOf("biome_tag").forGetter((instance) -> instance.biomeTag)
@@ -41,4 +41,5 @@ public class BiomeTagFilter extends PlacementFilter
 	public PlacementModifierType<?> type() {
 		return ModPlacementModifiers.BIOME_TAG.get();
 	}
+
 }
