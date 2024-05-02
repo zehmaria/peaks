@@ -32,8 +32,8 @@
 # biome = can be a single biome or a tag[must start with #]
 
 [[veins]]
-stone = "minecraft:iron_ore"
-deepslate = "minecraft:deepslate_iron_ore"
+stone = "minecraft:diamond_ore"
+deepslate = "minecraft:deepslate_diamond_ore"
 extraRadius = 0
 extraDeltaRadius = 0
 weight = 10
@@ -41,17 +41,8 @@ failure = 0
 biome = "#minecraft:is_overworld"
 
 [[veins]]
-stone = "minecraft:copper_ore"
-deepslate = "minecraft:deepslate_copper_ore"
-extraRadius = 0
-extraDeltaRadius = 0
-weight = 10
-failure = 0
-biome = "#minecraft:is_overworld"
-
-[[veins]]
-stone = "minecraft:coal_ore"
-deepslate = "minecraft:deepslate_coal_ore"
+stone = "minecraft:gold_ore"
+deepslate = "minecraft:deepslate_gold_ore"
 extraRadius = 5
 extraDeltaRadius = 5
 weight = 20

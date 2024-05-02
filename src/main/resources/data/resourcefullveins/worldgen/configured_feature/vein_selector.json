@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:random_selector",
+  "config": {
+    "default": {
+      "feature": "resourcefullveins:ore_vein_coal",
+      "placement": [
+      ]
+    },
+    "features": [
+      {
+        "chance": 0.25,
+        "feature": {
+          "feature": "resourcefullveins:ore_vein_copper",
+          "placement": [
+          ]
+        }
+      },
+      {
+        "chance": 0.25,
+        "feature": {
+          "feature": "resourcefullveins:ore_vein_iron",
+          "placement": [
+          ]
+        }
+      }
+    ]
+  }
+}
