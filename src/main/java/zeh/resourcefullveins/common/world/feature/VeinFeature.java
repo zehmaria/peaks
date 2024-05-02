@@ -13,16 +13,16 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
 import net.minecraftforge.registries.ForgeRegistries;
 import zeh.resourcefullveins.common.Configuration;
 import zeh.resourcefullveins.common.VeinConfig;
-import zeh.resourcefullveins.common.world.configuration.VeinConfiguration;
 
 import java.util.Objects;
 
-public class VeinFeature extends Feature<VeinConfiguration> {
+public class VeinFeature extends Feature<NoneFeatureConfiguration> {
 
-    public VeinFeature(Codec<VeinConfiguration> codec) {
+    public VeinFeature(Codec<NoneFeatureConfiguration> codec) {
 		super(codec);
 	}
 
@@ -38,7 +38,7 @@ public class VeinFeature extends Feature<VeinConfiguration> {
     }
 
     @Override
-    public boolean place(FeaturePlaceContext<VeinConfiguration> context) {
+    public boolean place(FeaturePlaceContext<NoneFeatureConfiguration> context) {
         WorldGenLevel _level = context.level();
         RandomSource _random = context.random();
         Holder<Biome> _biome = _level.getBiome(context.origin());
