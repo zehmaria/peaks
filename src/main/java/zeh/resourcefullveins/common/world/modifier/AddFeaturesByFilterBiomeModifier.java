@@ -14,8 +14,8 @@ import zeh.resourcefullveins.common.registry.ModBiomeModifiers;
 import java.util.Optional;
 
 public record AddFeaturesByFilterBiomeModifier(HolderSet<Biome> allowedBiomes, Optional<HolderSet<Biome>> deniedBiomes,
-        Optional<Float> minimumTemperature, Optional<Float> maximumTemperature, HolderSet<PlacedFeature> features,
-        GenerationStep.Decoration step) implements BiomeModifier {
+                                               Optional<Float> minimumTemperature, Optional<Float> maximumTemperature, HolderSet<PlacedFeature> features,
+                                               GenerationStep.Decoration step) implements BiomeModifier {
 
     @Override
     public void modify(Holder<Biome> biome, Phase phase, ModifiableBiomeInfo.BiomeInfo.Builder builder) {

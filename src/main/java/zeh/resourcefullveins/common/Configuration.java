@@ -2,7 +2,6 @@ package zeh.resourcefullveins.common;
 
 import com.electronwill.nightconfig.core.CommentedConfig;
 import com.electronwill.nightconfig.core.conversion.ObjectConverter;
-import com.google.common.collect.ImmutableList;
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModLoadingContext;
@@ -76,7 +75,8 @@ public class Configuration {
 		if (!df.exists()) {
 			try {
 				FileUtils.copyInputStreamToFile(Objects.requireNonNull(ResourcefullVeins.class.getClassLoader().getResourceAsStream(name)), df);
-			} catch (IOException e) { ResourcefullVeins.LOGGER.error("Error creating default config for " + name); }
+			} catch (IOException e) {
+                ResourcefullVeins.LOGGER.error("Error creating default config for {}", name); }
 		}
 	}
 

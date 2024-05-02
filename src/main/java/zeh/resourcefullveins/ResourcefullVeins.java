@@ -14,7 +14,6 @@ import zeh.resourcefullveins.common.registry.*;
 import zeh.resourcefullveins.common.Configuration;
 
 import org.slf4j.Logger;
-import zeh.resourcefullveins.common.world.VeinGeneration;
 
 @Mod(ResourcefullVeins.MODID)
 public class ResourcefullVeins {
@@ -32,7 +31,6 @@ public class ResourcefullVeins {
 		ModPlacementModifiers.PLACEMENT_MODIFIERS.register(modEventBus);
         ModBiomeModifiers.BIOME_MODIFIER_SERIALIZERS.register(modEventBus);
 
-        VeinGeneration.load();
         MinecraftForge.EVENT_BUS.register(this);
     }
 

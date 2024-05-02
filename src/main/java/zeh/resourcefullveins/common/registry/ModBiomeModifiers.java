@@ -15,6 +15,7 @@ import zeh.resourcefullveins.common.world.modifier.AddFeaturesByFilterBiomeModif
 import java.util.Optional;
 
 public class ModBiomeModifiers {
+
     public static DeferredRegister<Codec<? extends BiomeModifier>> BIOME_MODIFIER_SERIALIZERS =
             DeferredRegister.create(ForgeRegistries.Keys.BIOME_MODIFIER_SERIALIZERS, ResourcefullVeins.MODID);
 
@@ -34,4 +35,5 @@ public class ModBiomeModifiers {
                             GenerationStep.Decoration.CODEC.fieldOf("step")
                                     .forGetter(AddFeaturesByFilterBiomeModifier::step)
                     ).apply(builder, AddFeaturesByFilterBiomeModifier::new)));
+
 }

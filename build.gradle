@@ -24,7 +24,7 @@ apply plugin: "org.spongepowered.mixin"
 
 group = mod_author + '.' + mod_id // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = mod_id + "-forge"
-version = minecraft_version + '-' + new Date().format("yyMMdd'T'HH", TimeZone.getTimeZone("UTC"))
+version = minecraft_version + '-' + mod_version
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
@@ -72,8 +72,6 @@ minecraft {
     }
 }
 
-sourceSets.main.resources { srcDir 'src/generated/resources' }
-
 dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
 }
@@ -82,6 +80,19 @@ dependencies {
 afterEvaluate {
     tasks.configureReobfTaskForReobfJar.mustRunAfter(tasks.compileJava)
     tasks.configureReobfTaskForReobfJarJar.mustRunAfter(tasks.compileJava)
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8' // Use the UTF-8 charset for Java compilation
+}
+
+compileJava {
+    options.compilerArgs = ['-Xdiags:verbose']
+}
+
+sourceSets.main.resources {
+    srcDir 'src/generated/resources'
+    exclude '.cache/'
 }
 
 tasks.withType(JavaCompile).configureEach {
@@ -106,6 +117,11 @@ jar {
     }
 }
 
-// Example configuration to allow publishing using the maven-publish plugin
-// This is the preferred method to reobfuscate your jar file
+void addLicense(jarTask) {
+    jarTask.from('LICENSE') {
+        rename { "${it}_${project.archivesBaseName}" }
+    }
+}
+
 jar.finalizedBy('reobfJar')
+addLicense(jar)

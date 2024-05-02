@@ -13,7 +13,7 @@ public class ModBiomeFeatures {
     public static final DeferredRegister<Feature<?>> FEATURES =
             DeferredRegister.create(ForgeRegistries.FEATURES, ResourcefullVeins.MODID);
 
-	public static final RegistryObject<Feature<VeinConfiguration>> VEINS =
+    public static final RegistryObject<Feature<VeinConfiguration>> VEINS =
             FEATURES.register("gen_veins", () -> new VeinFeature(VeinConfiguration.CODEC));
 
 }

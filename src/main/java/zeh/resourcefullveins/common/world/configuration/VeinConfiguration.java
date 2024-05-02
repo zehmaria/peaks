@@ -19,12 +19,13 @@ public record VeinConfiguration(int tries, int xzSpread, int ySpread, Holder<Pla
 			ExtraCodecs.NON_NEGATIVE_INT.fieldOf("y_spread").orElse(3).forGetter(VeinConfiguration::ySpread),
 			PlacedFeature.CODEC.fieldOf("primary_feature").forGetter(VeinConfiguration::primaryFeature),
 			PlacedFeature.CODEC.optionalFieldOf("floor_feature").forGetter(floorConfig -> Optional.ofNullable(floorConfig.floorFeature))
-	).apply(config,
-			(tries, xzSpread, yspread, primary, floor) -> floor.map(
-					placedFeatureHolder -> new VeinConfiguration(tries, xzSpread, yspread, primary, placedFeatureHolder)
-			).orElseGet(() -> new VeinConfiguration(tries, xzSpread, yspread, primary, null))));
+	    ).apply(config, (tries, xzSpread, ySpread, primary, floor) -> floor.map(
+				placedFeatureHolder -> new VeinConfiguration(tries, xzSpread, ySpread, primary, placedFeatureHolder)
+			).orElseGet(() -> new VeinConfiguration(tries, xzSpread, ySpread, primary, null))
+        )
+    );
 
-	public int tries() { return this.tries; }
+    public int tries() { return this.tries; }
 	public int xzSpread() { return this.xzSpread; }
 	public int ySpread() { return this.ySpread; }
 	public Holder<PlacedFeature> primaryFeature() { return this.primaryFeature; }
