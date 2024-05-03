@@ -18,6 +18,7 @@ logoFile="logo.png"
     versionRange="[47.0.0,)"
     ordering="NONE"
     side="BOTH"
+
 [[dependencies.resourcefullveins]]
     modId="minecraft"
     mandatory=true

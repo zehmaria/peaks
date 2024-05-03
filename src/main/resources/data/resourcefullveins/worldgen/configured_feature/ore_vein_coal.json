@@ -1,12 +1,12 @@
 {
   "type": "resourcefullveins:gen_vein",
   "config": {
-    "extra_radius": 8,
-    "extra_delta_radius": 8,
+    "extra_radius": 2,
+    "extra_delta_radius": 2,
     "replace_stone": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "minecraft:coal_block"
+        "Name": "minecraft:coal_ore"
       }
     },
     "replace_deepslate": {

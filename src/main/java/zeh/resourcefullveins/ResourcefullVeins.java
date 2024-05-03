@@ -5,7 +5,9 @@ import com.google.gson.GsonBuilder;
 import com.mojang.logging.LogUtils;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 import net.minecraftforge.common.MinecraftForge;
@@ -25,7 +27,7 @@ public class ResourcefullVeins {
     public ResourcefullVeins() {
         final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        Configuration.setup();
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Configuration.COMMON_CONFIG);
 
         ModBiomeFeatures.FEATURES.register(modEventBus);
 		ModPlacementModifiers.PLACEMENT_MODIFIERS.register(modEventBus);
