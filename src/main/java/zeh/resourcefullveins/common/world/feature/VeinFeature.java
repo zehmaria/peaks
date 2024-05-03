@@ -42,12 +42,12 @@ public class VeinFeature extends Feature<VeinConfiguration> {
         BlockState _replaceStone = _vein.replaceStone().getState(_random, _pos);
         BlockState _replaceDeepslate = _vein.replaceDeepslate().getState(_random, _pos);
 
-        int _radius = radius + _vein.extraRadius() + deltaRadius + _vein.extraDeltaRadius();
+        int _maxRadius = radius + _vein.extraRadius() + deltaRadius + _vein.extraDeltaRadius();
 
-        for (int i = -_radius; i <= _radius; i++) {
-            for (int j = -_radius; j <= _radius; j++) {
-                int _dr = radius + _vein.extraRadius() + _random.nextInt(deltaRadius + _vein.extraDeltaRadius());
-                if (i * i + j * j <= _dr * _dr) {
+        for (int i = -_maxRadius; i <= _maxRadius; i++) {
+            for (int j = -_maxRadius; j <= _maxRadius; j++) {
+                int _dr = _maxRadius - _random.nextInt(deltaRadius + _vein.extraDeltaRadius());
+                if (i * i + j * j < _dr * _dr) {
                     BlockPos _top = context.origin().offset(0, 10, 0);
                     boolean _extraBlocks = true;
                     while (_top.getY() > -63) {
