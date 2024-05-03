@@ -6,7 +6,7 @@
     "replace_stone": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "minecraft:coal_block"
+        "Name": "minecraft:coal_ore"
       }
     },
     "replace_deepslate": {
