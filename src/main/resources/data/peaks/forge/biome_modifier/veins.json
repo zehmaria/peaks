@@ -1,0 +1,6 @@
+{
+  "type": "peaks:add_features_by_filter",
+  "allowed_biomes": "#minecraft:is_overworld",
+  "features": "peaks:veins",
+  "step": "vegetal_decoration"
+}

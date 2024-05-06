@@ -1,25 +1,25 @@
 modLoader="javafml"
 license="MIT"
 loaderVersion="[47,)"
-issueTrackerURL="https://github.com/zehmaria/resourcefullveins/issues"
-displayURL="https://github.com/zehmaria/resourcefullveins"
+issueTrackerURL="https://github.com/zehmaria/peaks/issues"
+displayURL="https://github.com/zehmaria/peaks"
 logoFile="logo.png"
 
 [[mods]]
-    modId="resourcefullveins"
+    modId="peaks"
     version="${file.jarVersion}"
-    displayName="Resourcefull Veins"
+    displayName="Peaks"
 	authors="zeh_maria"
     description="Find your resource-fix already sitting around in your world!"
 
-[[dependencies.resourcefullveins]]
+[[dependencies.peaks]]
     modId="forge"
     mandatory=true
     versionRange="[47.0.0,)"
     ordering="NONE"
     side="BOTH"
 
-[[dependencies.resourcefullveins]]
+[[dependencies.peaks]]
     modId="minecraft"
     mandatory=true
     versionRange="[1.20,1.21)"

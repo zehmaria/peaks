@@ -1,4 +1,4 @@
-package zeh.resourcefullveins;
+package zeh.peaks;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -12,19 +12,19 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 import net.minecraftforge.common.MinecraftForge;
 
-import zeh.resourcefullveins.common.registry.*;
-import zeh.resourcefullveins.common.Configuration;
+import zeh.peaks.common.registry.*;
+import zeh.peaks.common.Configuration;
 
 import org.slf4j.Logger;
 
-@Mod(ResourcefullVeins.MODID)
-public class ResourcefullVeins {
+@Mod(Peaks.MODID)
+public class Peaks {
 
-    public static final String MODID = "resourcefullveins";
+    public static final String MODID = "peaks";
     public static final Logger LOGGER = LogUtils.getLogger();
     public static final Gson GSON = new GsonBuilder().setPrettyPrinting().disableHtmlEscaping().create();
 
-    public ResourcefullVeins() {
+    public Peaks() {
         final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Configuration.COMMON_CONFIG);

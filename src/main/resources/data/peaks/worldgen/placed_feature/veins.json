@@ -1,5 +1,5 @@
 {
-  "feature": "resourcefullveins:vein_selector",
+  "feature": "peaks:vein_selector",
   "placement": [
     {
       "type": "minecraft:rarity_filter",
@@ -16,7 +16,7 @@
       "type": "minecraft:biome"
     },
     {
-      "type": "resourcefullveins:biome_tag",
+      "type": "peaks:biome_tag",
       "tag": "minecraft:is_overworld"
     }
   ]

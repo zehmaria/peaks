@@ -1,4 +1,4 @@
-package zeh.resourcefullveins.common.world.filter;
+package zeh.peaks.common.world.filter;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
@@ -11,7 +11,7 @@ import net.minecraft.world.level.levelgen.placement.PlacementContext;
 import net.minecraft.world.level.levelgen.placement.PlacementFilter;
 import net.minecraft.world.level.levelgen.placement.PlacementModifierType;
 import net.minecraftforge.registries.ForgeRegistries;
-import zeh.resourcefullveins.common.registry.ModPlacementModifiers;
+import zeh.peaks.common.registry.ModPlacementModifiers;
 
 public class BiomeTagFilter extends PlacementFilter {
 

@@ -1,4 +1,4 @@
-package zeh.resourcefullveins.common.world.modifier;
+package zeh.peaks.common.world.modifier;
 
 import com.mojang.serialization.Codec;
 import net.minecraft.core.Holder;
@@ -9,7 +9,7 @@ import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 import net.minecraftforge.common.world.BiomeGenerationSettingsBuilder;
 import net.minecraftforge.common.world.BiomeModifier;
 import net.minecraftforge.common.world.ModifiableBiomeInfo;
-import zeh.resourcefullveins.common.registry.ModBiomeModifiers;
+import zeh.peaks.common.registry.ModBiomeModifiers;
 
 import java.util.Optional;
 
