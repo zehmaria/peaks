@@ -1,0 +1,52 @@
+{
+  "type": "peaks:gen_vein",
+  "config": {
+    "extra_radius": 0,
+    "extra_delta_radius": 0,
+    "replace_bottom": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "minecraft:iron_block"
+      }
+    },
+      "replace_core": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "minecraft:raw_iron_block"
+      }
+    },
+    "replace_stone": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "minecraft:iron_ore"
+      }
+    },
+    "replace_stone_wrapper": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "minecraft:stone"
+      }
+    },
+    "replace_deepslate": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "minecraft:deepslate_iron_ore"
+      }
+    },
+    "replace_deepslate_wrapper": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "minecraft:deepslate"
+      }
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "blocks": "minecraft:air"
+      }
+    }
+  ]
+}

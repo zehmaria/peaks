@@ -1,4 +1,4 @@
-package zeh.resourcefullveins.common;
+package zeh.peaks.common;
 
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.fml.common.Mod;

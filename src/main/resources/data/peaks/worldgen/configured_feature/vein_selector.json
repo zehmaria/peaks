@@ -2,34 +2,34 @@
   "type": "minecraft:random_selector",
   "config": {
     "default": {
-      "feature": "resourcefullveins:ore_vein_coal",
+      "feature": "peaks:ore_vein_coal",
       "placement": [
         {
-          "type": "resourcefullveins:biome_tag",
+          "type": "peaks:biome_tag",
           "tag": "minecraft:is_overworld"
         }
       ]
     },
     "features": [
       {
-        "chance": 0.3,
+        "chance": 0.35,
         "feature": {
-          "feature": "resourcefullveins:ore_vein_copper",
+          "feature": "peaks:ore_vein_copper",
           "placement": [
             {
-              "type": "resourcefullveins:biome_tag",
+              "type": "peaks:biome_tag",
               "tag": "minecraft:is_overworld"
             }
           ]
         }
       },
       {
-        "chance": 0.3,
+        "chance": 0.35,
         "feature": {
-          "feature": "resourcefullveins:ore_vein_iron",
+          "feature": "peaks:ore_vein_iron",
           "placement": [
             {
-              "type": "resourcefullveins:biome_tag",
+              "type": "peaks:biome_tag",
               "tag": "minecraft:is_overworld"
             }
           ]

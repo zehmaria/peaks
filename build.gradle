@@ -41,7 +41,7 @@ minecraft {
             property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'info'
             mods {
-                resourcefullveins {
+                peaks {
                     source sourceSets.main
                 }
             }
@@ -51,7 +51,7 @@ minecraft {
             property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'info'
             mods {
-                resourcefullveins {
+                peaks {
                     source sourceSets.main
                 }
             }
@@ -60,10 +60,10 @@ minecraft {
             workingDirectory project.file('run')
             property 'forge.logging.markers', 'REGISTRIES,REGISTRYDUMP'
             property 'forge.logging.console.level', 'debug'
-            args '--mod', 'resourcefullveins', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
+            args '--mod', 'peaks', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
             
             mods {
-                resourcefullveins {
+                peaks {
                     source sourceSets.main
                 }
             }

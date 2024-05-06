@@ -6,20 +6,20 @@ displayURL="https://github.com/zehmaria/resourcefullveins"
 logoFile="logo.png"
 
 [[mods]]
-    modId="resourcefullveins"
+    modId="peaks"
     version="${file.jarVersion}"
-    displayName="Resourcefull Veins"
+    displayName="Peaks"
 	authors="zeh_maria"
     description="Find your resource-fix already sitting around in your world!"
 
-[[dependencies.resourcefullveins]]
+[[dependencies.peaks]]
     modId="forge"
     mandatory=true
     versionRange="[43.2.11,)"
     ordering="NONE"
     side="BOTH"
 
-[[dependencies.resourcefullveins]]
+[[dependencies.peaks]]
     modId="minecraft"
     mandatory=true
     versionRange="[1.19,1.20)"

@@ -1,4 +1,4 @@
-package zeh.resourcefullveins.common.registry;
+package zeh.peaks.common.registry;
 
 import com.mojang.serialization.Codec;
 import net.minecraft.core.Registry;
@@ -6,13 +6,13 @@ import net.minecraft.world.level.levelgen.placement.PlacementModifier;
 import net.minecraft.world.level.levelgen.placement.PlacementModifierType;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
-import zeh.resourcefullveins.ResourcefullVeins;
-import zeh.resourcefullveins.common.world.filter.BiomeTagFilter;
+import zeh.peaks.Peaks;
+import zeh.peaks.common.world.filter.BiomeTagFilter;
 
 public class ModPlacementModifiers {
 
 	public static final DeferredRegister<PlacementModifierType<?>> PLACEMENT_MODIFIERS =
-			DeferredRegister.create(Registry.PLACEMENT_MODIFIER_REGISTRY, ResourcefullVeins.MODID);
+			DeferredRegister.create(Registry.PLACEMENT_MODIFIER_REGISTRY, Peaks.MODID);
 
 	public static final RegistryObject<PlacementModifierType<BiomeTagFilter>> BIOME_TAG =
 			PLACEMENT_MODIFIERS.register("biome_tag", () -> typeConvert(BiomeTagFilter.CODEC));
