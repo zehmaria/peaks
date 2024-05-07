@@ -1,14 +1,23 @@
 {
+  "__comment0": "This file in particular is full of comments, to explain the whole deal if someone is confused about it.",
   "type": "peaks:gen_vein",
+  "__comment1": "Veins are features that spawns from bedrock to above ground in the form of a cylinder. It's config must include the values below.",
   "config": {
+    "__comment2": "The initial radius can be defined in the common config of the mod, but extra_radius adds to that number on a per basis.",
     "extra_radius": 2,
+    "__comment3": "The radius is not a perfect constant cylinder tho, but the starting point. Randomness is then used to create some variety. The extra delta also adds to the default delta on a per basis.",
     "extra_delta_radius": 2,
 
+    "__comment4": "The very peak of the vein that is generated above ground can be disabled. If done so, then the cylinder will be ground level flat.",
     "top_enabled": true,
+    "__comment5": "The height of the peak is calculated from the radius, the wider it is, the higher it is. That number then is multiplied by the value below.",
     "top_height_multiplier": 1.0,
 
+    "__comment6": "At the very bottom, a deposit is generated. It follows similar rules to the peak above, but starting from the bedrock.",
     "bottom_enabled": true,
+    "__comment7": "The height number based on the radius is multiplied by the value below.",
     "bottom_height_multiplier": 0.5,
+    "__comment8": "The bottom base of the cylinder can be any block that follows vanilla's simple_state_provided. https://minecraft.fandom.com/wiki/Custom_world_generation/block_state_provider",
     "bottom_deposit": {
       "type": "minecraft:simple_state_provider",
       "state": {
@@ -16,12 +25,17 @@
       }
     },
 
+    "__comment9": "The main shaft of the cylinder is defines by these cylindrical layers. There can be as many as you wish.",
     "cylindrical_surfaces": [
       {
+        "__comment10": "However, the min and max radius must be defined for each, and if overlaps happen, the first entry in the Array will be chosen.",
         "min_radius": 0,
+        "__comment11": "These radius must be between 0.0 and 1.0, indicating a portion of the calculated radius, after including the deltas and such.",
         "max_radius": 0.25,
+        "__comment12": "The blocks for each surface must be define using targets. This follows vanilla's stuff, the full rule set can be found on https://minecraft.fandom.com/wiki/Custom_world_generation/rule_test",
         "targets": [
           {
+            "__comment13": "There can also be as many of those as you wish, but if overlaps happen, the first will be chosen.",
             "state": {
               "Name": "minecraft:coal_block"
             },
@@ -66,5 +80,6 @@
         ]
       }
     ]
-  }
+  },
+  "__comment14": "This is how far the custom stuff I coded go. The rest, present in vein_selector.json and veins.json are fully vanilla stuff. The mod doesn't requite it to be defined like that. If you follow vanilla's rules, you can define whatever while referencing back to this configured feature."
 }
