@@ -43,7 +43,7 @@ public class VeinFeature extends Feature<VeinConfiguration> {
         try {
             for (int i = -_maxRadius; i <= _maxRadius; i++) {
                 for (int j = -_maxRadius; j <= _maxRadius; j++) {
-                    int _dr = _maxRadius - _random.nextInt(deltaRadius + _vein.extraDeltaRadius();
+                    int _dr = _maxRadius - _random.nextInt(deltaRadius + _vein.extraDeltaRadius());
 
                     if (i * i + j * j <= _dr * _dr) {
                         _anchor.set(_pos.offset(0, _maxRadius + 1, 0));
