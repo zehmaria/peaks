@@ -1,19 +1,19 @@
 package zeh.peaks.common.registry;
 
+import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.levelgen.feature.Feature;
-import net.minecraftforge.registries.RegistryObject;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.ForgeRegistries;
+import net.neoforged.neoforge.registries.DeferredRegister;
 import zeh.peaks.Peaks;
 import zeh.peaks.common.world.configuration.VeinConfiguration;
 import zeh.peaks.common.world.feature.VeinFeature;
+import java.util.function.Supplier;
 
 public class ModBiomeFeatures {
 
     public static final DeferredRegister<Feature<?>> FEATURES =
-            DeferredRegister.create(ForgeRegistries.FEATURES, Peaks.MODID);
+            DeferredRegister.create(Registries.FEATURE, Peaks.MODID);
 
-    public static final RegistryObject<Feature<VeinConfiguration>> VEINS =
+    public static final Supplier<Feature<VeinConfiguration>> WILD_CROP =
             FEATURES.register("gen_vein", () -> new VeinFeature(VeinConfiguration.CODEC));
 
 }

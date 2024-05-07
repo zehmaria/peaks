@@ -1,27 +1,25 @@
 modLoader="javafml"
-license="MIT"
-loaderVersion="[47,)"
+loaderVersion="${loader_version}"
 issueTrackerURL="https://github.com/zehmaria/peaks/issues"
-displayURL="https://github.com/zehmaria/peaks"
-logoFile="logo.png"
+license="MIT"
 
 [[mods]]
     modId="peaks"
-    version="${file.jarVersion}"
+    version="${version}"
     displayName="Peaks"
+    displayURL="https://github.com/zehmaria/peaks"
 	authors="zeh_maria"
+    logoFile="logo.png"
     description="Find your resource-fix already sitting around in your world!"
 
 [[dependencies.peaks]]
-    modId="forge"
-    mandatory=true
-    versionRange="[47.0.0,)"
-    ordering="NONE"
+    modId="neoforge"
+    type="required"
+    versionRange="${neoforge_version}"
     side="BOTH"
 
 [[dependencies.peaks]]
     modId="minecraft"
-    mandatory=true
-    versionRange="[1.20,1.21)"
-    ordering="NONE"
+    type="required"
+    versionRange="${mc_version}"
     side="BOTH"

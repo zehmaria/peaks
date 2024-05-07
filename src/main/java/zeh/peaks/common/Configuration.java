@@ -1,18 +1,16 @@
 package zeh.peaks.common;
 
-import net.minecraftforge.common.ForgeConfigSpec;
-import net.minecraftforge.fml.common.Mod;
+import net.neoforged.neoforge.common.ModConfigSpec;
 
-@Mod.EventBusSubscriber
 public class Configuration {
 
-    public static ForgeConfigSpec COMMON_CONFIG;
+    public static ModConfigSpec COMMON_CONFIG;
 
-	public static ForgeConfigSpec.IntValue VEIN_RADIUS;
-	public static ForgeConfigSpec.IntValue VEIN_DELTA_RADIUS;
+	public static ModConfigSpec.IntValue VEIN_RADIUS;
+	public static ModConfigSpec.IntValue VEIN_DELTA_RADIUS;
 
     static {
-		ForgeConfigSpec.Builder COMMON_BUILDER = new ForgeConfigSpec.Builder();
+		ModConfigSpec.Builder COMMON_BUILDER = new ModConfigSpec.Builder();
 
 	    COMMON_BUILDER.comment("Vein generation").push("general_vein");
 
