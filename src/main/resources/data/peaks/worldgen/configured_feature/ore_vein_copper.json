@@ -3,50 +3,68 @@
   "config": {
     "extra_radius": 0,
     "extra_delta_radius": 0,
-    "replace_bottom": {
+
+    "top_enabled": true,
+    "top_height_multiplier": 1.0,
+
+    "bottom_enabled": true,
+    "bottom_height_multiplier": 0.5,
+    "bottom_deposit": {
       "type": "minecraft:simple_state_provider",
       "state": {
         "Name": "minecraft:copper_block"
       }
     },
-    "replace_core": {
-      "type": "minecraft:simple_state_provider",
-      "state": {
-        "Name": "minecraft:raw_copper_block"
+
+    "cylindrical_surfaces": [
+      {
+        "min_radius": 0,
+        "max_radius": 0.25,
+        "targets": [
+          {
+            "state": {
+              "Name": "minecraft:raw_copper_block"
+            },
+            "target": {
+              "predicate_type": "minecraft:tag_match",
+              "tag": "minecraft:stone_ore_replaceables"
+            }
+          },
+          {
+            "state": {
+              "Name": "minecraft:raw_copper_block"
+            },
+            "target": {
+              "predicate_type": "minecraft:tag_match",
+              "tag": "minecraft:deepslate_ore_replaceables"
+            }
+          }
+        ]
+      },
+      {
+        "min_radius": 0.25,
+        "max_radius": 1.0,
+        "targets": [
+          {
+            "state": {
+              "Name": "minecraft:copper_ore"
+            },
+            "target": {
+              "predicate_type": "minecraft:tag_match",
+              "tag": "minecraft:stone_ore_replaceables"
+            }
+          },
+          {
+            "state": {
+              "Name": "minecraft:deepslate_copper_ore"
+            },
+            "target": {
+              "predicate_type": "minecraft:tag_match",
+              "tag": "minecraft:deepslate_ore_replaceables"
+            }
+          }
+        ]
       }
-    },
-    "replace_stone": {
-      "type": "minecraft:simple_state_provider",
-      "state": {
-        "Name": "minecraft:copper_ore"
-      }
-    },
-    "replace_stone_wrapper": {
-      "type": "minecraft:simple_state_provider",
-      "state": {
-        "Name": "minecraft:stone"
-      }
-    },
-    "replace_deepslate": {
-      "type": "minecraft:simple_state_provider",
-      "state": {
-        "Name": "minecraft:deepslate_copper_ore"
-      }
-    },
-    "replace_deepslate_wrapper": {
-      "type": "minecraft:simple_state_provider",
-      "state": {
-        "Name": "minecraft:deepslate"
-      }
-    }
-  },
-  "placement": [
-    {
-      "type": "minecraft:block_predicate_filter",
-      "predicate": {
-        "type": "minecraft:matching_blocks",
-        "blocks": "minecraft:air"
-      }
-    }
-  ]
+    ]
+  }
 }
