@@ -1,6 +1,6 @@
 package zeh.peaks.common.world.filter;
 
-import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
@@ -11,24 +11,17 @@ import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.levelgen.placement.PlacementContext;
 import net.minecraft.world.level.levelgen.placement.PlacementFilter;
 import net.minecraft.world.level.levelgen.placement.PlacementModifierType;
-import zeh.peaks.common.registry.ModPlacementModifiers;
 
-public class BiomeTagFilter extends PlacementFilter {
+public class BiomeTagFilter extends PlacementFilter implements PlacementModifierType<BiomeTagFilter> {
 
-	public static final Codec<BiomeTagFilter> CODEC = RecordCodecBuilder.create(
-        (builder) -> builder.group(
-		    TagKey.codec(Registries.BIOME).fieldOf("tag").forGetter((instance) -> instance.biomeTag)
-	    ).apply(builder, BiomeTagFilter::new)
-    );
+	public static final MapCodec<BiomeTagFilter> CODEC = RecordCodecBuilder.mapCodec((builder) -> builder.group(
+			TagKey.codec(Registries.BIOME).fieldOf("tag").forGetter((instance) -> instance.biomeTag)
+	).apply(builder, BiomeTagFilter::new));
 
 	private final TagKey<Biome> biomeTag;
 
 	private BiomeTagFilter(TagKey<Biome> biomeTag) {
 		this.biomeTag = biomeTag;
-	}
-
-	public static BiomeTagFilter biomeIsInTag(TagKey<Biome> biomeTag) {
-		return new BiomeTagFilter(biomeTag);
 	}
 
 	@Override
@@ -39,7 +32,11 @@ public class BiomeTagFilter extends PlacementFilter {
 
 	@Override
 	public PlacementModifierType<?> type() {
-		return ModPlacementModifiers.BIOME_TAG.get();
+		return this.type();
 	}
 
+	@Override
+	public MapCodec codec() {
+		return CODEC;
+	}
 }

@@ -4,9 +4,9 @@
   "__comment1": "Veins are features that spawns from bedrock to above ground in the form of a cylinder. It's config must include the values below.",
   "config": {
     "__comment2": "The initial radius can be defined in the common config of the mod, but extra_radius adds to that number on a per basis.",
-    "extra_radius": 2,
+    "radius": 10,
     "__comment3": "The radius is not a perfect constant cylinder tho, but the starting point. Randomness is then used to create some variety. The extra delta also adds to the default delta on a per basis.",
-    "extra_delta_radius": 2,
+    "delta_radius": 6,
 
     "__comment4": "The very peak of the vein that is generated above ground can be disabled. If done so, then the cylinder will be ground level flat.",
     "top_enabled": true,

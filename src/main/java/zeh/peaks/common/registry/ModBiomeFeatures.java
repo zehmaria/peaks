@@ -13,7 +13,6 @@ public class ModBiomeFeatures {
     public static final DeferredRegister<Feature<?>> FEATURES =
             DeferredRegister.create(Registries.FEATURE, Peaks.MODID);
 
-    public static final Supplier<Feature<VeinConfiguration>> WILD_CROP =
-            FEATURES.register("gen_vein", () -> new VeinFeature(VeinConfiguration.CODEC));
+    public static final Supplier<Feature<VeinConfiguration>> VEINS = FEATURES.register("gen_vein", VeinFeature::new);
 
 }

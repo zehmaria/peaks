@@ -1,6 +1,5 @@
 package zeh.peaks.common.world.feature;
 
-import com.mojang.serialization.Codec;
 import net.minecraft.core.SectionPos;
 import net.minecraft.util.Mth;
 import net.minecraft.world.level.block.state.BlockState;
@@ -12,18 +11,14 @@ import net.minecraft.world.level.WorldGenLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration.TargetBlockState;
-import zeh.peaks.common.Configuration;
 import zeh.peaks.common.world.configuration.CylindricalSurface;
 import zeh.peaks.common.world.configuration.VeinConfiguration;
 
 public class VeinFeature extends Feature<VeinConfiguration> {
 
-    public VeinFeature(Codec<VeinConfiguration> codec) {
-		super(codec);
+    public VeinFeature() {
+		super(VeinConfiguration.CODEC);
 	}
-
-    final private int radius = Configuration.VEIN_RADIUS.get();
-    final private int deltaRadius = Configuration.VEIN_DELTA_RADIUS.get();
 
     @Override
     public boolean place(FeaturePlaceContext<VeinConfiguration> context) {
@@ -35,7 +30,7 @@ public class VeinFeature extends Feature<VeinConfiguration> {
         BlockState _replaceBottom = _vein.bottomDeposit().getState(_random, _pos);
 
         int count = 0;
-        int _maxRadius = radius + _vein.extraRadius() + _random.nextInt(deltaRadius + _vein.extraDeltaRadius());
+        int _maxRadius = _vein.radius() + _random.nextInt(_vein.deltaRadius());
         BlockPos.MutableBlockPos _anchor = new BlockPos.MutableBlockPos();
         BlockPos.MutableBlockPos _offset = new BlockPos.MutableBlockPos();
         BulkSectionAccess _bulk = new BulkSectionAccess(_level);
@@ -43,7 +38,7 @@ public class VeinFeature extends Feature<VeinConfiguration> {
         try {
             for (int i = -_maxRadius; i <= _maxRadius; i++) {
                 for (int j = -_maxRadius; j <= _maxRadius; j++) {
-                    int _dr = _maxRadius - _random.nextInt(deltaRadius + _vein.extraDeltaRadius());
+                    int _dr = _maxRadius - _random.nextInt(_vein.deltaRadius());
 
                     if (i * i + j * j <= _dr * _dr) {
                         _anchor.set(_pos.offset(0, _maxRadius + 1, 0));

@@ -14,10 +14,6 @@
     },
     {
       "type": "minecraft:biome"
-    },
-    {
-      "type": "peaks:biome_tag",
-      "tag": "minecraft:is_overworld"
     }
   ]
 }
