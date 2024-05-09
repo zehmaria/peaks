@@ -14,6 +14,6 @@ public class ModBiomeFeatures {
             DeferredRegister.create(ForgeRegistries.FEATURES, Peaks.MODID);
 
     public static final RegistryObject<Feature<VeinConfiguration>> VEINS =
-            FEATURES.register("gen_vein", () -> new VeinFeature(VeinConfiguration.CODEC));
+            FEATURES.register("gen_vein", VeinFeature::new);
 
 }

@@ -18,8 +18,8 @@ import zeh.peaks.common.world.configuration.VeinConfiguration;
 
 public class VeinFeature extends Feature<VeinConfiguration> {
 
-    public VeinFeature(Codec<VeinConfiguration> codec) {
-		super(codec);
+    public VeinFeature() {
+		super(VeinConfiguration.CODEC);
 	}
 
     final private int radius = Configuration.VEIN_RADIUS.get();

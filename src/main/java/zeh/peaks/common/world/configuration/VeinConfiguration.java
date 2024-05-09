@@ -27,7 +27,4 @@ public record VeinConfiguration(int extraRadius, int extraDeltaRadius,
 			Codec.list(CylindricalSurface.CODEC).fieldOf("cylindrical_surfaces").forGetter(VeinConfiguration::surfaces)
 		).apply(config, VeinConfiguration::new));
 
-	public int extraRadius() { return this.extraRadius; }
-	public int extraDeltaRadius() { return this.extraDeltaRadius; }
-
 }

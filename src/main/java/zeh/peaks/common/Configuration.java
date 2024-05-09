@@ -1,9 +1,7 @@
 package zeh.peaks.common;
 
 import net.minecraftforge.common.ForgeConfigSpec;
-import net.minecraftforge.fml.common.Mod;
 
-@Mod.EventBusSubscriber
 public class Configuration {
 
     public static ForgeConfigSpec COMMON_CONFIG;
