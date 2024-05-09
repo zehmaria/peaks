@@ -26,18 +26,6 @@
       {
         "chance": 0.35,
         "feature": {
-          "feature": "peaks:ore_vein_copper",
-          "placement": [
-            {
-              "type": "peaks:biome_tag",
-              "tag": "minecraft:is_overworld"
-            }
-          ]
-        }
-      },
-      {
-        "chance": 0.35,
-        "feature": {
           "feature": "peaks:ore_vein_iron",
           "placement": [
             {
