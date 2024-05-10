@@ -10,7 +10,7 @@ license="MIT"
     displayURL="https://github.com/zehmaria/peaks"
 	authors="zeh_maria"
     logoFile="logo.png"
-    description="Find your resource-fix already sitting around in your world!"
+    description="Exposed large ore veins, designed with quarries in mind."
 
 [[dependencies.peaks]]
     modId="neoforge"
