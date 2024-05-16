@@ -1,15 +1,9 @@
 {
-  "neoforge:conditions": [
-    {
-      "type": "neoforge:mod_loaded",
-      "modid": "ae2"
-    }
-  ],
-  "feature": "peaks:ore_vein_zinc",
+  "feature": "peaks:overworld/peaks",
   "placement": [
     {
       "type": "minecraft:rarity_filter",
-      "chance": 50
+      "chance": 600
     },
     {
       "type": "minecraft:in_square"

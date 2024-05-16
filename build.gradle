@@ -28,6 +28,8 @@ archivesBaseName = mod_id + "-neoforge"
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(java_version)
 
+minecraft.accessTransformers.file file('src/main/resources/META-INF/accesstransformer.cfg')
+
 sourceSets.main.resources {
     srcDirs += 'src/generated/resources'
     exclude '.cache'
@@ -71,6 +73,7 @@ runs {
 repositories {
 
 }
+
 
 dependencies {
     implementation "net.neoforged:neoforge:${neoforge_version}"

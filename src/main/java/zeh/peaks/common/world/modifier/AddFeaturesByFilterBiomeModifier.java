@@ -11,6 +11,7 @@ import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 import net.neoforged.neoforge.common.world.BiomeGenerationSettingsBuilder;
 import net.neoforged.neoforge.common.world.BiomeModifier;
 import net.neoforged.neoforge.common.world.ModifiableBiomeInfo;
+import org.jetbrains.annotations.NotNull;
 import zeh.peaks.common.registry.ModBiomeModifiers;
 import java.util.Optional;
 
@@ -32,7 +33,7 @@ public record AddFeaturesByFilterBiomeModifier(
         ).apply(builder, AddFeaturesByFilterBiomeModifier::new));
 
     @Override
-    public void modify(Holder<Biome> biome, Phase phase, ModifiableBiomeInfo.BiomeInfo.Builder builder) {
+    public void modify(@NotNull Holder<Biome> biome, @NotNull Phase phase, ModifiableBiomeInfo.BiomeInfo.@NotNull Builder builder) {
         if (phase == Phase.ADD && this.allowedBiomes.contains(biome)) {
             if (deniedBiomes.isPresent() && this.deniedBiomes.get().contains(biome)) {
                 return;
@@ -49,7 +50,7 @@ public record AddFeaturesByFilterBiomeModifier(
     }
 
     @Override
-    public MapCodec<? extends BiomeModifier> codec() {
+    public @NotNull MapCodec<? extends BiomeModifier> codec() {
         return ModBiomeModifiers.ADD_FEATURES_BY_FILTER.get();
     }
 
