@@ -32,7 +32,7 @@
           {
             "provider" : {
               "type": "peaks:compat_priority_selector",
-              "blocks": ["immersiveengineering:raw_silver_block", "thermal:raw_silver_block", "eidolon:raw_silver_block", "embers:raw_silver_block", "occultism:raW_silver_block"]
+              "blocks": ["immersiveengineering:raw_silver_block", "thermal:raw_silver_block", "eidolon:raw_silver_block", "embers:raw_silver_block", "occultism:raw_silver_block"]
             },
             "target": {
               "predicate_type": "minecraft:tag_match",
