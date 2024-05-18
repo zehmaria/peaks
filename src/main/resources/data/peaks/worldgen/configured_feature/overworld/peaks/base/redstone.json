@@ -4,7 +4,7 @@
     "radius": 4,
     "delta_radius": 3,
 
-    "top_height_multiplier": 0.5,
+    "top_height_multiplier": 0.75,
 
     "bottom_height_multiplier": 1.5,
     "bottom_deposit": {
