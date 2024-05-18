@@ -1,15 +1,9 @@
 {
-  "forge:conditions": [
-    {
-      "type": "forge:mod_loaded",
-      "modid": "create"
-    }
-  ],
-  "feature": "peaks:ore_vein_zinc",
+  "feature": "peaks:overworld/peaks",
   "placement": [
     {
       "type": "minecraft:rarity_filter",
-      "chance": 900
+      "chance": 555
     },
     {
       "type": "minecraft:in_square"

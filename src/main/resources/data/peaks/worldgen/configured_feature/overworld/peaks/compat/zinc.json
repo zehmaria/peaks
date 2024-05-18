@@ -1,24 +1,16 @@
 {
-  "forge:conditions": [
-    {
-      "type": "forge:mod_loaded",
-      "modid": "create"
-    }
-  ],
-  "type": "peaks:gen_vein",
+  "type": "peaks:peak_gen",
   "config": {
-    "extra_radius": 0,
-    "extra_delta_radius": 2,
+    "radius": 5,
+    "delta_radius": 4,
 
-    "top_enabled": true,
-    "top_height_multiplier": 1.0,
+    "top_height_multiplier": 0.75,
 
-    "bottom_enabled": true,
-    "bottom_height_multiplier": 0.5,
+    "bottom_height_multiplier": 0.75,
     "bottom_deposit": {
-      "type": "minecraft:simple_state_provider",
-      "state": {
-        "Name": "create:zinc_block"
+      "provider" : {
+        "type": "peaks:compat_priority_selector",
+        "blocks": ["create:zinc_block"]
       }
     },
 
@@ -28,8 +20,9 @@
         "max_radius": 0.25,
         "targets": [
           {
-            "state": {
-              "Name": "create:raw_zinc_block"
+            "provider" : {
+              "type": "peaks:compat_priority_selector",
+              "blocks": ["create:raw_zinc_block"]
             },
             "target": {
               "predicate_type": "minecraft:tag_match",
@@ -37,8 +30,9 @@
             }
           },
           {
-            "state": {
-              "Name": "create:raw_zinc_block"
+            "provider" : {
+              "type": "peaks:compat_priority_selector",
+              "blocks": ["create:raw_zinc_block"]
             },
             "target": {
               "predicate_type": "minecraft:tag_match",
@@ -52,8 +46,9 @@
         "max_radius": 1.0,
         "targets": [
           {
-            "state": {
-              "Name": "create:zinc_ore"
+            "provider" : {
+              "type": "peaks:compat_priority_selector",
+              "blocks": ["create:zinc_ore"]
             },
             "target": {
               "predicate_type": "minecraft:tag_match",
@@ -61,8 +56,9 @@
             }
           },
           {
-            "state": {
-              "Name": "create:deepslate_zinc_ore"
+            "provider" : {
+              "type": "peaks:compat_priority_selector",
+              "blocks": ["create:deepslate_zinc_ore"]
             },
             "target": {
               "predicate_type": "minecraft:tag_match",

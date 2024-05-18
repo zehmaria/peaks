@@ -1,29 +1,32 @@
 {
-  "type": "peaks:gen_vein",
+  "type": "peaks:peak_gen",
   "config": {
-    "extra_radius": 0,
-    "extra_delta_radius": 0,
+    "radius": 7,
+    "delta_radius": 5,
 
-    "top_enabled": true,
     "top_height_multiplier": 1.0,
 
-    "bottom_enabled": true,
     "bottom_height_multiplier": 0.5,
     "bottom_deposit": {
-      "type": "minecraft:simple_state_provider",
-      "state": {
-        "Name": "minecraft:iron_block"
+      "provider": {
+        "type": "minecraft:simple_state_provider",
+        "state": {
+          "Name": "minecraft:copper_block"
+        }
       }
     },
 
     "cylindrical_surfaces": [
       {
         "min_radius": 0,
-        "max_radius": 0.25,
+        "max_radius": 0.2,
         "targets": [
           {
-            "state": {
-              "Name": "minecraft:raw_iron_block"
+            "provider": {
+              "type": "minecraft:simple_state_provider",
+              "state": {
+                "Name": "minecraft:raw_copper_block"
+              }
             },
             "target": {
               "predicate_type": "minecraft:tag_match",
@@ -31,8 +34,11 @@
             }
           },
           {
-            "state": {
-              "Name": "minecraft:raw_iron_block"
+            "provider": {
+              "type": "minecraft:simple_state_provider",
+              "state": {
+                "Name": "minecraft:raw_copper_block"
+              }
             },
             "target": {
               "predicate_type": "minecraft:tag_match",
@@ -42,12 +48,15 @@
         ]
       },
       {
-        "min_radius": 0.25,
+        "min_radius": 0.2,
         "max_radius": 1.0,
         "targets": [
           {
-            "state": {
-              "Name": "minecraft:iron_ore"
+            "provider": {
+              "type": "minecraft:simple_state_provider",
+              "state": {
+                "Name": "minecraft:copper_ore"
+              }
             },
             "target": {
               "predicate_type": "minecraft:tag_match",
@@ -55,8 +64,11 @@
             }
           },
           {
-            "state": {
-              "Name": "minecraft:deepslate_iron_ore"
+            "provider": {
+              "type": "minecraft:simple_state_provider",
+              "state": {
+                "Name": "minecraft:deepslate_copper_ore"
+              }
             },
             "target": {
               "predicate_type": "minecraft:tag_match",

@@ -3,15 +3,15 @@ package zeh.peaks;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.mojang.logging.LogUtils;
+
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-
-import zeh.peaks.common.registry.*;
 import zeh.peaks.common.Configuration;
+import zeh.peaks.common.registry.*;
 
 import org.slf4j.Logger;
 
@@ -29,9 +29,10 @@ public class Peaks {
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Configuration.COMMON_CONFIG);
 
         ModBiomeFeatures.FEATURES.register(modEventBus);
-		ModPlacementModifiers.PLACEMENT_MODIFIERS.register(modEventBus);
+        ModPlacementModifiers.PLACEMENT_MODIFIERS.register(modEventBus);
         ModBiomeModifiers.BIOME_MODIFIER_SERIALIZERS.register(modEventBus);
-
+        ModBlockStateProviders.BLOCK_STATE_PROVIDERS.register(modEventBus);
+        
     }
 
     public static ResourceLocation asResource(String path) {
