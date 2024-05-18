@@ -1,8 +1,13 @@
 plugins {
     id 'idea'
     id 'net.neoforged.gradle.userdev' version '7.0.41'
-    id 'net.neoforged.gradle.mixin' version '7.0.41'
     id 'java-library'
+}
+
+tasks.named('wrapper', Wrapper).configure {
+    //Define wrapper values here so as to not have to always do so when updating gradlew.properties
+    gradleVersion = '8.7'
+    distributionType = Wrapper.DistributionType.ALL
 }
 
 idea {
@@ -21,7 +26,9 @@ version = minecraft_version + '-' + mod_version
 group = mod_author + '.' + mod_id // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = mod_id + "-neoforge"
 
-java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+java.toolchain.languageVersion = JavaLanguageVersion.of(java_version)
+
+minecraft.accessTransformers.file file('src/main/resources/META-INF/accesstransformer.cfg')
 
 sourceSets.main.resources {
     srcDirs += 'src/generated/resources'
@@ -46,8 +53,8 @@ processResources {
 runs {
     configureEach {
         workingDirectory project.file("run/${it.name}")
-        systemProperty 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
-        systemProperty 'forge.logging.console.level', 'debug'
+        //systemProperty 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
+        //systemProperty 'forge.logging.console.level', 'debug'
         modSource project.sourceSets.main
     }
 
