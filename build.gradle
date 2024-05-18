@@ -34,6 +34,8 @@ minecraft {
     } else {
         mappings channel: 'official', version: "${minecraft_version}"
     }
+    
+    accessTransformers.from(file('src/main/resources/META-INF/accesstransformer.cfg'))
 
     runs {
         client = {
